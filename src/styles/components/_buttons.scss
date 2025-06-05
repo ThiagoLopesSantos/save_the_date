@@ -1,6 +1,10 @@
+@use "../variables" as *;
 
 
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 12px;
     font-size: 18px;
     font-weight: bold;
@@ -10,15 +14,46 @@
     white-space: nowrap;
 
     &--primary {
-        color: yellow;
-        background-color: green;
+        color: $colorYellow2;
+        background-image: linear-gradient(25deg, $colorYellow3, $colorBlack);
+        text-shadow: 1px 1px 1px $colorBlack;        
+        transition: all ease-in-out 0.5s;
         
         &:hover {
-            background-color: lighten(green, 5%);
+            font-size: 19px;
+            box-shadow: 1px 1px 3px $colorBlack;
+            background-image: linear-gradient(25deg, $colorYellow1 , $colorBlack2);
+        }
+    }
+    &--secondary {
+        color: $colorYellow2;
+        background-image: linear-gradient(25deg,$colorBlack , $colorYellow3);
+        text-shadow: 1px 1px 1px $colorBlack;        
+        transition: all ease-in-out 0.5s;
+        
+        &:hover {
+            font-size: 19px;
+            box-shadow: 1px 1px 3px $colorBlack;
+            background-image: linear-gradient(25deg,$colorBlack2 , $colorYellow1);
+        }
+    }
+    &--tertiary {
+        width: 100%;
+        height: 170px;
+        color: $colorYellow2;
+        background-color: $colorBlack;
+        text-shadow: 1px 1px 1px $colorBlack;        
+        transition: all ease-in-out 0.5s;
+        
+        &:hover {
+            font-size: 19px;
+            box-shadow: 1px 1px 3px $colorBlack;
+            background-color: $colorGreen;
+
         }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
         display: flex;
         text-align: center;
         align-items: center;
@@ -29,6 +64,7 @@
 
     @media (max-width: 1024px) {
         display: flex;
-        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
     }
 }

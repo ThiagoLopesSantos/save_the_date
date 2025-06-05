@@ -1,45 +1,47 @@
-
+@use "../variables" as *;
 
 
 .infos-bar {
+    max-width: 100%;
+    margin: 0 auto;
     padding: 16px 24px;
-    box-shadow: 1px 1px 15px #ffffff;
+    box-shadow: 1px 1px 15px $colorYellow3;
     border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: $colorGrayOpacity2;
     display: flex;
-    justify-content: space-between;
-    transition: all ease-in-out 1s;
+    justify-content: center;
+    gap: 35px;
 
-    &:hover {
-        scale: 1.1;
-        background-color: rgba(255, 255, 255, 0.89);
-        box-shadow: 1px 1px 10px #eee;
-        cursor: pointer;
-    }
+
     &__infos {
         display: flex;
         gap: 40px;
 
         &__item {
-            font-size: 14px;
-            color: black;
+            font-size: 18px;
+            font-weight: bolder;
+            color: $colorBlack;
+            line-height: 30px;
+
 
             b {
-                color: black;
-                font-size: 18px;
+                color: $colorBlack;
+                font-size: 25px;
                 display: block;
             }
         }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
+        max-width: 100%;
         display: block;
 
         &__infos {
             display: block;
 
             &__item {
-                margin-bottom: 24px;
+                margin-bottom: 24px;        
+                text-align: center;
             }
         }
     }

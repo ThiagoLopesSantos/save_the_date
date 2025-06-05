@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/main.scss">
 
 </head>
-<body>
+<body id="inicio">
     <header class="hero">
         
         <div class="container">
@@ -24,24 +24,75 @@
             <div class="infos-bar">
                 <ul class="infos-bar__infos">
                     <li class="infos-bar__infos__item">
-                        <b>Localização</b>
-                        Restaurante Sushi da Praça - Rua Alm. João Cândido Brasil, 120 - Tijuca, Rio de Janeiro - RJ, 20550-162
-                    </li>
-                    <li class="infos-bar__infos__item">
-                        <b>Preço</b>
-                        Rodízio partir de R$ 120,00.
-                    </li>
-                    <li class="infos-bar__infos__item">
-                        <b>Quando</b>
-                        23/06/2025 às 18:30.
+                        <b>Quando:</b>
+                        Dia 23/06/2025 às 18:30.
                     </li>
                 </ul>
+                <a class="button button--secondary" href="#location">
+                    Mais informações
+                </a>
                 <a class="button button--primary" href="https://wa.me/5521973374727?text=Direto%20do%20site%20Save%20The%20Date:%20%20%20Oi%20Jéssica!%20Eu%20estarei%20presente%20no%20seu%20aniversário!%20<3">
-                    Confirme sua presença
+                    Confirme sua presença!
                 </a>
             </div>
+            
+            <!-- Mini Menu -->
+            <nav id="miniMenu" class="mini-menu hidden">
+                <button id="hamburgerBtn" class="mini-menu__button hamburger">
+                    &#9776;
+                </button>
+                <ul id="miniMenuList" class="mini-menu__list menu-list">
+                    <li class="mini-menu__list__item"><a class="list--style" href="#inicio">Início</a></li>
+                    <li class="mini-menu__list__item"><a class="list--style" href="#location">Localização</a></li>
+                    <li class="mini-menu__list__item"><a class="list--style" href="#restaurant">Restaurante</a></li>
+                    <li class="mini-menu__list__item"><a class="list--style" href="#invitation">Convite</a></li>
+                </ul>
+            </nav>
+            
         </div>
     </header>
+    <section id="location" class="event event--local" >
+        <div class="container" data-aos="fade-right">
+            <div class="event__details">
+                <h2 class="event__details__title">Localização:</h2>
+                <p class="event__details__description">
+                    Vamos comemorar esse grande dia com um rodízio de comida japonesa no <u>RESTAURANTE SUSHI DA PRAÇA.</u>
+                    Localizado na Rua Alm. João Cândido Brasil, 120 - Tijuca, Rio de Janeiro - RJ, 20550-162
+                </p>
+            </div>
+            <iframe class="event__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235038.49466843123!2d-43.539887827544476!3d-23.006271038292407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f3ba3e1d7b5%3A0x8edd99bb64aeae2a!2sSushi%20da%20Pra%C3%A7a%20-%20Culin%C3%A1ria%20Japonesa%20%7C%20Tijuca!5e0!3m2!1spt-BR!2sbr!4v1749147645769!5m2!1spt-BR!2sbr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section id="restaurant" class="event event--rodizio event--image-left" >
+        <div class="container" data-aos="fade-left">
+            <div class="event__details">
+                <h2 class="event__details__title">Restaurante</h2>
+                <p class="event__details__description">
+                    No restaurante teremos rodízio de comida japonesa que custará: R$ 120,00/pessoa.
+                </p>
+            </div>
+            <img class="event__image" src="./images/rodizio.jpg" alt="Front-end">
+        </div>
+    </section>
+
+    <section id="invitation" class="event event--local" >
+        <div class="container" data-aos="fade-right">
+            <div class="event__details">
+                <h2 class="event__details__title">Vem fazer parte deste dia especial comigo!</h2>
+                <a class="button button--tertiary" href="https://wa.me/5521973374727?text=Direto%20do%20site%20Save%20The%20Date:%20%20%20Oi%20Jéssica!%20Eu%20estarei%20presente%20no%20seu%20aniversário!%20<3">
+                    Confirmar presença!
+                </a>
+            </div>
+            <img class="event__image" src="./images/aniversariante.jpg" alt="Front-end"> 
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>
+            &copy;  Thiago Lopes Santos - Save The Date 2025 - Todos os direitos reservados. 
+        </p>
+    </footer>
     
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

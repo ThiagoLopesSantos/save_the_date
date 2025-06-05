@@ -26,3 +26,24 @@ const contaAsHoras = setInterval(function (){
         document.getElementById('contador').innerHTML = 'Evento concluído!';
     }
 }, 1000);
+
+// funcionamento do mini menu
+document.addEventListener("DOMContentLoaded", function () {
+    const miniMenu = document.getElementById('miniMenu');
+    const miniMenuList = document.getElementById('miniMenuList');
+    const hamburguer = document.getElementById('hamburgerBtn');
+    
+    // mostra o mini menu após sair da tela principal
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > window.innerHeight * 0.6) {
+            miniMenu.classList.remove('hidden');
+        } else {
+            miniMenu.classList.add('hidden');
+        }
+    });
+
+    // menu hamburger para tablet e celular
+    hamburguer.addEventListener('click', () => {
+        miniMenuList.classList.toggle('hiddenList');
+    });
+});

@@ -1,4 +1,8 @@
 @use "hero";
+@use "miniMenu";
+@use "event";
+@use "footer";
+@use 'variables' as *;
 @use "./components/infos_bar";
 @use "./components/buttons";
 
@@ -9,7 +13,8 @@
     box-sizing: border-box;
     font-family: Mate SC, sans-serif;
     list-style: none;
-    color: #eec383;
+    color: $colorYellow1;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -26,3 +31,8 @@
     }
 
 }
+
+.hidden {
+    display:none;
+}
+
