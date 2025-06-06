@@ -2,7 +2,8 @@
 
 .event {
     padding: 80px 0;
-
+    overflow-inline: hidden;
+    
     &--local {
         background-image: linear-gradient($colorRed 60%, $colorYellow2);
     }
